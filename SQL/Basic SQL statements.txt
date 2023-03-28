@@ -1,0 +1,48 @@
+SELECT statement
+helps you slect as display specific informations(rows and columns ) from the table 
+ SELECT *(this represents all infromation from the table)  FROM (table name)
+
+
+2) DISTINCT 
+Distinct slects unique value in a specific column 
+
+SELECT DISTINCT(Gender) FGROM (Table name)
+
+Will return only Male and Female in a table that has onlt male and females as gender, even if we have a million rows 
+
+3) COUNT 
+Counts  return all the NON-NULL value in a column 
+ SELECT COUNT(lastname) FROM employeedemographics 
+Will return a value of 9
+
+ALIASES helps us name the outcome of a query 
+fro ALIASES we use AS
+
+4) AVERAGE 
+SELECT AVG(salary) FROM employeesalary  will give us average of the salary 
+
+5) MIN 
+SELECT MIN(salary) FROM employeesalary will give us the minimum salary 
+
+6)MAX 
+SELECT MAX(salary) FROM emloyeesalary will give us the maximun salary. 
+
+
+7) You can  pull information in another database while working in a database by tweaking the from statement. 
+ E.g while working in the analysis database 
+You can pull info from employeesalary table using the following
+SELECT salary FROM DATAanalystbootcamp.dbo.Employeesalary 
+
+other statements include WHERE statements(Helps filter)
+Where can be used with arithmetic operators such as 
+> < OR AND = !=   <> Null NOT NULL IN LIKE ILIKE  e.t.c 
+
+WHERE lastname LIKE "S%" gives you lastname that starts with Letter "S"
+
+IN helps you create a list of values to test for using it with WHERE clause 
+
+
+8) GROUP BY AND ORDER BY 
+GROUP BY gives us what the unique value is and rolled them up into one column
+
+ORDER BY is used for sorting 
