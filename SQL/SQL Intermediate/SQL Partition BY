@@ -1,0 +1,17 @@
+PARTITION BY 
+Although Partition By and  GROUP BY statements have some similarities , 
+
+GROUP BY reduce the number of rows by rolling them up and then 
+ calculating calculating the Average and SUM for each group. 
+
+
+PARTITION BY divides the result into partition instead, it doesnt reduce 
+the number of rows. 
+
+SYNTAX
+SELECT firstname, lastname, gender, salary, Count(gender) OVER(PARTITION BY gender) AS Total_gender
+FROM employeedemographics  d
+JOIN employeesalary s
+ON s.employeeid = d.employeeid
+
+ 
