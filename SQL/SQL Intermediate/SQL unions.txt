@@ -1,0 +1,29 @@
+UNIONS 
+
+Both UNION AND JOIN require combining two tables together to create one output
+Difference is that a join combines based on a common column but for union , you have to select all the data from each table,
+and put it in one output where all the data in each column is not separated out. 
+
+when using UNION
+Make sure the data you are selecting is the same.
+Syntax for Union 
+
+Ife we have two table EmloyeeDemographics and WarehouseEmployeeDemographics
+We both contain the same number of columns with same data sets. 
+
+SELECT *
+FROM EmployeeDemographics
+UNION
+SELECT *
+FROM WareHouseEmployeeDemographics
+
+When we have duplicates they we be remobved using UNION . 
+
+To have  the duplicates in our output we use UNION ALL i.e 
+
+SELECT *
+FROM EmployeeDemographics
+UNION ALL 
+SELECT *
+FROM WareHouseEmployeeDemographics
+

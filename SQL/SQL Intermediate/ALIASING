@@ -1,0 +1,5 @@
+ALIASING
+Aliasing means temporarily changing the column name or table name is your script
+It's not going to affect your script 
+Aliasing is often used for the readability of your script. 
+

@@ -1,0 +1,23 @@
+Case Statement
+
+A case Statement allows you to specify conditions and also allows you to 
+specify what you want in return when this condition is being met. 
+
+SYNTAX
+TABLE 
+EmployeeDemographics 
+
+condition: WE want to specify if particular age in dataset is OLD OR YOUNG 
+Those older than 30 are OLD, while those younger than 30 are  YOUNG 
+
+CODE
+SELECT firstName, LastName, Age,
+CASE 
+	WHEN Age > 30 THEN 'old'
+	ELSE 'young'
+END  Age_classifiation
+FROM EmployeeDemographics
+WHERE Age is NOT NULL
+ORDER BY Age 
+
+

@@ -1,0 +1,37 @@
+Having Clause is used in place of WHERE clause when setting conditions 
+for aggregate functions 
+
+SYNTAX 
+
+SELECT jobtitle, COUNT(jobtitle)
+FROM Employeedemographics ed
+JOIN
+Employeesalary es
+ON ed.employeeid=es.employeeid
+WHERE  COUNT(jobtitle) > 1
+GROUP BY 1
+
+NOTE: This code above will not work except the WHERE CLAUSE is replaced 
+with HAVING clause, because where doesnt work with Aggregate functions 
+
+SELECT jobtitle, COUNT(jobtitle)
+FROM Employeedemographics ed
+JOIN
+Employeesalary es
+ON ed.employeeid=es.employeeid
+HAVING  COUNT(jobtitle) > 1
+GROUP BY 1
+
+NOTE: This will note work as well because the HAVING function is completely
+dependent on the GROUP BY statement, we are performing it after it's been aggregated. 
+
+SELECT jobtitle, COUNT(jobtitle)
+FROM Employeedemographics ed
+JOIN
+Employeesalary es
+ON ed.employeeid=es.employeeid
+GROUP BY 1
+HAVING  COUNT(jobtitle) > 1
+
+This is the correct syntax while usiog the HAVING CLAUSE. 
+

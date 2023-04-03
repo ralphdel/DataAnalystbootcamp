@@ -1,0 +1,37 @@
+*Inner Joins  
+*Full/Left/Right Outer Joins 
+
+A join is a way to combine multiple tables into a single output 
+
+Our tables "Emloyeedemographics" & "Employeesalary" has similar column
+>>  EmployeeID 
+when you join a table you have to join them on a similar column 
+
+INNER JOIN 
+
+SELECT *  
+FROM  Employeedemographics 
+INNER JOIN Employeesalary
+	ON Employeedemographics.EmployeeID = Employeesalary.EmployeeID
+
+**Notice the inner join or joins only joins table where the two EmployeeID intersects 
+
+If we change the join statement like this
+
+SELECT *  
+FROM  Employeedemographics 
+FULL OUTER  JOIN Employeesalary
+	ON Employeedemographics.EmployeeID = Employeesalary.EmployeeID
+All the information on the left and right table will be pulled. 
+
+A LEFT OUTER JOIN PULLS ALL INFORMATION O THE LEFT SIDE OF THE TABLE
+regardless if they have matching info on the right table 
+
+SELECT *  
+FROM  Employeedemographics 
+LEFT JOIN Employeesalary
+	ON Employeedemographics.EmployeeID = Employeesalary.EmployeeID
+
+RIGHT JOIN DOES VICE VERSA 
+
+ 
